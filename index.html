@@ -25,8 +25,9 @@
               <li><a href="#about">About Us</a></li>
               <li><a href="#clients">Clients</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Produk</a></li>
+              <li><a href="#produk">Produk</a></li>
               <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
             </ul>
           </div>
         </div>
@@ -38,8 +39,9 @@
       <li><a href="#about">About Us</a></li>
       <li><a href="#clients">Clients</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Produk</a></li>
+      <li><a href="#produk">Produk</a></li>
       <li><a href="#">Contact Us</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
     </ul>
     <!-- Akhir Navbar -->
 
@@ -114,7 +116,7 @@
     <section id="services" class="services grey lighten-3 scrollspy">
       <div class="container">
         <div class="row">
-          <h3 class="light center grey-text text-darken-3">Melayani</h3>
+          <h3 class="light center grey-text text-darken-3">Services</h3>
           <div class="col m6 s12">
             <div class="card-panel center">
               <i class="material-icons medium">local_florist</i>
@@ -142,7 +144,7 @@
     <!-- Akhir Services -->
 
     <!-- Produk -->
-    <section id="portfolio" class="portfolio scrollspy">
+    <section id="produk" class="portfolio scrollspy">
       <div class="container">
         <h3 class="light center grey-text text-darken-3">Produk</h3>
         <!-- karangan bunga -->
@@ -320,7 +322,13 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => {
+        // tampilkan alert
+        
+        // reset form
+        form.reset();
+        console.log('Success!', response)
+      })
       .catch(error => console.error('Error!', error.message))
   })
 </script>
